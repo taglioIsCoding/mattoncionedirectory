@@ -72,7 +72,7 @@ public class Menu1 extends javax.swing.JPanel {
 
         jButton1.setBackground(java.awt.Color.pink);
         jButton1.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jButton1.setForeground(java.awt.Color.white);
+        jButton1.setForeground(java.awt.Color.green);
         jButton1.setText("BANALE");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -87,7 +87,7 @@ public class Menu1 extends javax.swing.JPanel {
 
         jButton2.setBackground(java.awt.Color.green);
         jButton2.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jButton2.setForeground(java.awt.Color.white);
+        jButton2.setForeground(java.awt.Color.yellow);
         jButton2.setText("ONESTO");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +97,7 @@ public class Menu1 extends javax.swing.JPanel {
 
         jButton3.setBackground(java.awt.Color.pink);
         jButton3.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setForeground(java.awt.Color.red);
         jButton3.setText("DIFFICILE");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -74,7 +74,7 @@ public class MapGen
                                         g.setStroke(new BasicStroke(4));
 					//g.fillRect(j * brickWidth + 80, i * brickHeight + 50, brickWidth, brickHeight);
 					
-					g.setColor(Color.black);
+					g.setColor(Color.white);
 					g.drawRect(j * brickWidth + 80, i * brickHeight + 50, brickWidth, brickHeight);		
                                          
 				}

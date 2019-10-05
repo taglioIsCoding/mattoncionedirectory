@@ -79,15 +79,21 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
         
         public BufferedImage palla()
   {
-      BufferedImage image = null;
-    try
-    {
-        image = ImageIO.read(new File("palla.png"));
-    } 
-    catch (IOException e)
-    {
-    }
-    return image;
+        	
+    BufferedImage bufferedImage = new BufferedImage(5, 5, BufferedImage.TYPE_INT_RGB);
+    Color transparent = new Color(0x00FFFFFF, true);
+    Graphics2D g = (Graphics2D) bufferedImage.getGraphics();
+    //trying to make the bufferedImage transparent 
+    g.setComposite(AlphaComposite.Src);
+    g.setColor(transparent);
+    g.setBackground(transparent);
+    g.fillRect(0, 0, bufferedImage.getWidth(), bufferedImage.getHeight());
+    //drawing the circle 
+    g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+    g.setColor(Color.black);
+    g.drawOval(5, 5, 50, 50);
+    g.setStroke(new BasicStroke(5));
+    return bufferedImage;
   }
 
 
@@ -191,7 +197,8 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
       BufferedImage image = null;
     try
     {
-        image = ImageIO.read(new File("coppa.png"));
+        image = ImageIO.read(new File(""
+        		+ "coppa.png"));
     } 
     catch (IOException e)
     {
@@ -268,13 +275,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
 		timer.start();
                 //definisce il movimento della palla
 		if(avvio){			
-			if(new Rectangle(pallapX, pallapY, 20, 20).intersects(new Rectangle(giocatoreX, 550, 30, 8))){
+			if(new Rectangle(pallapX, pallapY, 10, 10).intersects(new Rectangle(giocatoreX, 550, 30, 8))){
 				direzionepY = -direzionepY;
 				direzionepX = -5;
-			}else if(new Rectangle(pallapX, pallapY, 20, 20).intersects(new Rectangle(giocatoreX + 70, 550, 30, 8))){
+			}else if(new Rectangle(pallapX, pallapY, 10, 10).intersects(new Rectangle(giocatoreX + 70, 550, 30, 8))){
 				direzionepY = -direzionepY;
 				direzionepX = direzionepX + 3;
-			}else if(new Rectangle(pallapX, pallapY, 20, 20).intersects(new Rectangle(giocatoreX + 30, 550, 40, 8))){
+			}else if(new Rectangle(pallapX, pallapY, 10, 10).intersects(new Rectangle(giocatoreX + 30, 550, 40, 8))){
 				direzionepY = -direzionepY;
 			}
 			
