@@ -33,20 +33,20 @@ public class MapGen
             int col=0;
             switch (scelta){
                                     case 0: 
-                                        mappa = new int[4][7];
-                                        setMattoncini(28);
+                                        mappa = new int[5][7];
+                                        setMattoncini(35);
                                          row=4;
                                          col=7;
                                         break;
                                     case 1: 
-                                        mappa = new int[5][12];
-                                        setMattoncini(60);
+                                        mappa = new int[6][12];
+                                        setMattoncini(72);
                                          row=5;
                                          col=12;
                                         break;
                                     case 2:
-                                        mappa = new int[6][12];
-                                        setMattoncini(72);
+                                        mappa = new int[7][12];
+                                        setMattoncini(84);
                                          row=6;
                                          col=12;
                                         break;
